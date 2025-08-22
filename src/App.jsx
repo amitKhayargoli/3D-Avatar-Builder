@@ -4,7 +4,8 @@ import viteLogo from '/vite.svg'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import PocketBase from 'pocketbase';
-const pb = new PocketBase(process.env.REACT_APP_POCKETBASE_URL);
+
+const pb = new PocketBase(import.meta.env.VITE_POCKETBASE_URL);
 
 function App() {
   const [count, setCount] = useState(0)
